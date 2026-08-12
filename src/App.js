@@ -1,24 +1,100 @@
 import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import Button from 'react-bootstrap/Button';
+
+function Home() {
+  return (
+    <>
+      <title>Travis Wylie - Home</title>
+      <div className="page">
+        <h1>Hello, world!</h1>
+        <p>My name is Travis Wylie, I am a software developer currently seeking a new opportunity.</p>
+
+        <br />
+        <p>With 7 years of professional software development experience on top of having completed freelance work and mentoring, I have contributed to the development of many kinds of different applications while still finding time to continue with my own projects.</p>
+        <p>In my previous employment, I have been responsible for aiding the training of new staff members both locally and remote, while creating additional applications to help colleagues with timekeeping. As a result, time logs were more accurate and less time was taken to keep these logs as the software integrated with company systems by API.</p>
+        <p>I have also had experience working remotely using time management skills and communication to assist collegues with various tasks while working on projects in varying timezones.</p>
+        <p>I am currently seeking an employment opportunity that would allow me to utilize my current experience and continue to grow as a developer while allowing me to follow my passion of creating new and exciting software.</p>
+
+        <br />
+        <br />
+        <p><i>A self hosted AI model running through copilot was used in the creation of this site.</i></p>
+        <br />
+        <br />
+
+        <h2>CV:</h2>
+        <p>You can view my paper CV through the following link:</p>
+        
+        <br />
+        <div className="text-center m-4">
+          <Button 
+            variant="primary" 
+            href="https://drive.google.com/file/d/1tDHiBeaDQXg8N4GZfSC6oSyP4ae8egjP/view?usp=sharing"
+            download
+            className="download-cv-btn"
+          >
+            <i className="bi bi-download"></i> CV as PDF
+          </Button>
+        </div>
+      </div>
+    </>
+  );
+}
+
+function Experience() {
+  return (
+    <>
+      <title>Travis Wylie - Experience</title>
+      <div className="page">
+        <h1>Experience</h1>
+        <p>Professional journey and skills.</p>
+      </div>
+    </>
+  );
+}
+
+function Projects() {
+  return (
+    <div className="page">
+      <h1>Projects</h1>
+      <p>My recent work and projects.</p>
+    </div>
+  );
+}
+
+function Contact() {
+  return (
+    <div className="page">
+      <h1>Contact Me</h1>
+      <p>Get in touch with me.</p>
+    </div>
+  );
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <div className="app-container">
+          <nav className="sidebar">
+            <Link to="/" className="nav-link">Home</Link>
+            <Link to="/experience" className="nav-link">Experience</Link>
+            <Link to="/projects" className="nav-link">Projects</Link>
+            <Link to="/contact" className="nav-link">Contact</Link>
+          </nav>
+
+          <main className="content-area">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/experience" element={<Experience />} />
+              <Route path="/projects" element={<Projects />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
+          </main>
+        </div>
+      </div>
+    </Router>
   );
 }
 
