@@ -22,7 +22,7 @@ function Home() {
 
         <br />
         <br />
-        <p><i>A self hosted AI model running through copilot was $\dots$</i></p>
+        <p><i>A self hosted AI model was used in the creation of this site.</i></p>
         <br />
         <br />
 
