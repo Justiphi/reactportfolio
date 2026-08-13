@@ -62,19 +62,7 @@ body {
   margin: 0;
 }
 
-.nav-link {
-  color: white;
-  text-decoration: none;
-  padding: 10px;
-  border-radius: 5px;
-  margin-bottom: 10px;
-  display: block;
-  transition: background-color 0.3s;
-}
 
-.nav-link.active {
-  background-color: rgba(255, 255, 255, 0.2);
-}
 
 .page {
   padding: 2rem;
@@ -103,7 +91,27 @@ h1, h2 {
 .content-area {
   flex: 1;
   padding: 2rem;
-  margin-left: 250px;
+}
+
+/* Pill style for NavLinks */
+.nav-link {
+  border-radius: 50px; /* Makes it a pill shape */
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+  color: white !important; /* Explicitly set to white to override default link blue */
+  text-decoration: none; /* Removes underline from hyperlink */
+}
+
+.nav-link:hover {
+  background-color: rgba(77, 171, 247, 0.2); /* Primary color with low opacity */
+  color: white !important;
+}
+
+.nav-link.active {
+  background-color: var(--primary-color);
+  color: white !important;
+  font-weight: bold;
 }
 
 .download-cv-btn {
