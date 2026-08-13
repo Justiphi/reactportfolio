@@ -1,9 +1,10 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import EmploymentHistory from './components/EmploymentHistory';
 import Qualifications from './components/Qualifications';
+import Navbar from './components/Navbar';
 
 function Home() {
   return (
@@ -21,7 +22,7 @@ function Home() {
 
         <br />
         <br />
-        <p><i className="text-muted">A self hosted AI model running through copilot was $\dots$</i></p>
+        <p><i>A self hosted AI model running through copilot was $\dots$</i></p>
         <br />
         <br />
 
@@ -81,14 +82,7 @@ function App() {
     <Router>
       <div className="App">
         <div className="app-container d-flex">
-          <nav className="sidebar p-3 border-end vh-100" style={{ minWidth: '200px' }}>
-            <ul className="nav flex-column">
-              <li className="nav-item"><Link to="/" className="nav-link text-dark">Home</Link></li>
-              <li className="nav-item"><Link to="/experience" className="nav-link text-dark">Experience</Link></li>
-              <li className="nav-item"><Link to="/projects" className="nav-link text-dark">Projects</Link></li>
-              <li className="nav-item"><Link to="/contact" className="nav-link text-dark">Contact</Link></li>
-            </ul>
-          </nav>
+          <Navbar />
 
           <main className="content-area p-5 flex-grow-1">
             <Routes>
