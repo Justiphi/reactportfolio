@@ -22,15 +22,10 @@ function Home() {
         <p>I am currently seeking an employment opportunity that would allow me to utilize my current experience and continue to grow as a developer while allowing me to follow my passion of creating new and exciting software.</p>
 
         <br />
-        <br />
-        <p><i>A self hosted AI model was used in the creation of this site.</i></p>
-        <br />
-        <br />
 
         <h2 className="mb-3">CV:</h2>
         <p>You can view my paper CV through the following link:</p>
-        
-        <br />
+
         <div className="text-center m-4">
           <Button 
             variant="primary" 
@@ -41,6 +36,14 @@ function Home() {
             <i className="bi bi-download"></i> CV as PDF
           </Button>
         </div>
+        
+
+        <br />
+        <br />
+        <p><i>A self hosted AI model was used in the creation of this site.</i></p>
+        <hr />
+        <p><i>Travis Wylie - 2026</i></p>
+
       </div>
     </>
   );
