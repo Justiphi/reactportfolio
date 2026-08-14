@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import EmploymentHistory from './components/EmploymentHistory';
 import Qualifications from './components/Qualifications';
+import ProjectList from './components/Projects';
 import Navbar from './components/Navbar';
 
 function Home() {
@@ -64,6 +65,7 @@ function Projects() {
     <div className="page">
       <h1 className="mb-4">Projects</h1>
       <p>My recent work and projects.</p>
+      <ProjectList />
     </div>
   );
 }

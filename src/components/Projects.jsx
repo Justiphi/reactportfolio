@@ -1,17 +1,17 @@
 import React, {useState, useEffect} from "react";
 import { Card, Table } from "react-bootstrap";
 
-function EmploymentHistory() {
+function ProjectsList() {
   
-    const [employment, setEmployment] = useState([]);
+    const [projects, setProjects] = useState([]);
     const [loading, setLoading] = useState(true);
   
     useEffect(() => {
         // Fetch from the Node.js Express server URL
-        fetch('http://localhost:8000/api/experience')
+        fetch('http://localhost:8000/api/projects')
             .then((res) => res.json())
             .then((data) => {
-                setEmployment(data);
+                setProjects(data);
                 setLoading(false);
             })
             .catch((err) => {
@@ -20,34 +20,32 @@ function EmploymentHistory() {
             });
     }, []);
   
-    if (loading) return <p>Loading employment history...</p>;
+    if (loading) return <p>Loading projects...</p>;
 
   return (
     <Card className="shadow-sm mb-5 bg-dark text-light border-secondary">
       <Card.Header className="bg-secondary text-white">
-        <h2 className="mb-0 h5">Employment History</h2>
+        <h2 className="mb-0 h5">Personal Projects</h2>
       </Card.Header>
       <Card.Body>
         <Table variant="dark" striped hover responsive className="mb-0">
           <thead>
             <tr>
-              <th>Job Title</th>
-              <th>Company</th>
-              <th>Languages Used</th>
-              <th>Frameworks Used</th>
-              <th>Year Stated</th>
-              <th>Year Ended</th>
+                <th>Project</th>
+                <th>Description</th>
+                <th>Language(s)</th>
+                <th>Framework(s)</th>
+                <th>Code</th>
             </tr>
           </thead>
           <tbody>
-            {employment.filter(e => e.SoftwareBased).sort((a, b) => a.StartYear - b.StartYear).map((job, index) => (
+            {projects.map((project, index) => (
               <tr key={index}>
-                <td>{job.Title}</td>
-                <td>{job.Company}</td>
-                <td>{job.Languages}</td>
-                <td>{job.Framework}</td>
-                <td>{job.StartYear}</td>
-                <td>{job.EndYear}</td>
+                <td>{project.Title}</td>
+                <td>{project.Description}</td>
+                <td>{project.Languages}</td>
+                <td>{project.Framework}</td>
+                <td><a href={project.GithubLink} target="_blank">(Github)</a></td>
               </tr>
             ))}
           </tbody>
@@ -57,4 +55,4 @@ function EmploymentHistory() {
   );
 };
 
-export default EmploymentHistory;
+export default ProjectsList;
