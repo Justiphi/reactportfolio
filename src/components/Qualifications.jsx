@@ -1,20 +1,26 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { Card, Table } from "react-bootstrap";
 
-const Qualifications = () => {
-  // Placeholder data - replace with your actual qualifications
-  const qualifications = [
-    {
-      title: "B.Sc. in Computer Science",
-      awardedBy: "University of Technology",
-      year: "2018",
-    },
-    {
-      title: "Full Stack Web Development Certification",
-      awardedBy: "Online Academy",
-      year: "2019",
-    },
-  ];
+function Qualifications() {
+
+  const [qualifications, setQualifications] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+      // Fetch from the Node.js Express server URL
+      fetch('http://localhost:8000/api/qualifications')
+          .then((res) => res.json())
+          .then((data) => {
+              setQualifications(data);
+              setLoading(false);
+          })
+          .catch((err) => {
+              console.error('Error fetching data from API:', err);
+              setLoading(false);
+          });
+  }, []);
+
+  if (loading) return <p>Loading qualifications...</p>;
 
   return (
     <Card className="shadow-sm mb-5 bg-dark text-light border-secondary">
@@ -33,9 +39,9 @@ const Qualifications = () => {
           <tbody>
             {qualifications.map((qual, index) => (
               <tr key={index}>
-                <td>{qual.title}</td>
-                <td>{qual.awardedBy}</td>
-                <td>{qual.year}</td>
+                <td>{qual.Title}</td>
+                <td>{qual.Location}</td>
+                <td>{qual.Year}</td>
               </tr>
             ))}
           </tbody>
