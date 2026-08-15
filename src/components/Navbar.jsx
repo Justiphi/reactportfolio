@@ -20,6 +20,15 @@ const Navbar = () => {
           <li className="nav-item">
             <NavLink to="/contact" className="nav-link">Contact</NavLink>
           </li>
+          <br />
+          <hr />
+          <br />
+          <li className="nav-item">
+            <NavLink to="https://www.linkedin.com/in/travis-wylie-9b1129154/" className="nav-link">LinkedIn</NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink to="https://github.com/justiphi" className="nav-link">Github</NavLink>
+          </li>
         </ul>
       </nav>
     </div>

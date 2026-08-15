@@ -45,7 +45,7 @@ function ProjectsList() {
                 <td>{project.Description}</td>
                 <td>{project.Languages}</td>
                 <td>{project.Framework}</td>
-                <td><a href={project.GithubLink} target="_blank">(Github)</a></td>
+                <td><a href={project.GithubLink} rel="noopener">(Github)</a></td>
               </tr>
             ))}
           </tbody>

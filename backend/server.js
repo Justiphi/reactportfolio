@@ -31,7 +31,7 @@ sql.connect(dbConfig)
 
 app.get('/api/Experience', async (req, res) => {
     try {
-        const result = await sql.query`SELECT * FROM Experience`;
+        const result = await sql.query`SELECT * FROM Experience ORDER BY StartYear DESC`;
         res.json(result.recordset); // Returns raw array of rows
     } catch (err) {
         res.status(500).json({ error: err.message });
@@ -40,7 +40,7 @@ app.get('/api/Experience', async (req, res) => {
 
 app.get('/api/Qualifications', async (req, res) => {
     try {
-        const result = await sql.query`SELECT * FROM Qualifications`;
+        const result = await sql.query`SELECT * FROM Qualifications ORDER BY Year DESC`;
         res.json(result.recordset); // Returns raw array of rows
     } catch (err) {
         res.status(500).json({ error: err.message });
@@ -49,7 +49,7 @@ app.get('/api/Qualifications', async (req, res) => {
 
 app.get('/api/Projects', async (req, res) => {
     try {
-        const result = await sql.query`SELECT * FROM Projects`;
+        const result = await sql.query`SELECT * FROM Projects ORDER BY Active DESC, Title`;
         res.json(result.recordset); // Returns raw array of rows
     } catch (err) {
         res.status(500).json({ error: err.message });

@@ -40,7 +40,7 @@ function EmploymentHistory() {
             </tr>
           </thead>
           <tbody>
-            {employment.filter(e => e.SoftwareBased).sort((a, b) => a.StartYear - b.StartYear).map((job, index) => (
+            {employment.filter(e => e.SoftwareBased).map((job, index) => (
               <tr key={index}>
                 <td>{job.Title}</td>
                 <td>{job.Company}</td>

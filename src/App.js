@@ -23,6 +23,22 @@ function Home() {
 
         <br />
 
+        <h2 className="mb-3">Blazor portfolio:</h2>
+        <p>I also have a web portfolio made with Blazor:</p>
+
+        <div className="text-center m-4">
+          <Button 
+            variant="primary" 
+            href="https://traviswylie.co.nz"
+            download
+            className="download-cv-btn"
+          >
+            <i className="bi bi-download"></i> Go to Blazor Site
+          </Button>
+        </div>
+
+        <br />
+
         <h2 className="mb-3">CV:</h2>
         <p>You can view my paper CV through the following link:</p>
 
