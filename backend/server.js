@@ -29,7 +29,7 @@ sql.connect(dbConfig)
     })
     .catch(err => console.error('Database Connection Failed:', err));
 
-app.get('/api/Experience', async (req, res) => {
+app.get('/api/GetExperience', async (req, res) => {
     try {
         const result = await sql.query`SELECT * FROM Experience ORDER BY StartYear DESC`;
         res.json(result.recordset); // Returns raw array of rows
@@ -38,7 +38,7 @@ app.get('/api/Experience', async (req, res) => {
     }
 });
 
-app.get('/api/Qualifications', async (req, res) => {
+app.get('/api/GetQualifications', async (req, res) => {
     try {
         const result = await sql.query`SELECT * FROM Qualifications ORDER BY Year DESC`;
         res.json(result.recordset); // Returns raw array of rows
@@ -47,7 +47,7 @@ app.get('/api/Qualifications', async (req, res) => {
     }
 });
 
-app.get('/api/Projects', async (req, res) => {
+app.get('/api/GetProjects', async (req, res) => {
     try {
         const result = await sql.query`SELECT * FROM Projects ORDER BY Active DESC, Title`;
         res.json(result.recordset); // Returns raw array of rows

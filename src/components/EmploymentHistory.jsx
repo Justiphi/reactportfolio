@@ -8,7 +8,7 @@ function EmploymentHistory() {
   
     useEffect(() => {
         // Fetch from the Node.js Express server URL
-        fetch('/api/experience')
+        fetch('/api/getexperience')
             .then((res) => res.json())
             .then((data) => {
                 setEmployment(data);
