@@ -8,7 +8,7 @@ function Qualifications() {
 
   useEffect(() => {
       // Fetch from the Node.js Express server URL
-      fetch('http://127.0.0.1:8000/api/qualifications')
+      fetch('/api/qualifications')
           .then((res) => res.json())
           .then((data) => {
               setQualifications(data);

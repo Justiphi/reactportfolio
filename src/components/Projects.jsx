@@ -8,7 +8,7 @@ function ProjectsList() {
   
     useEffect(() => {
         // Fetch from the Node.js Express server URL
-        fetch('http://127.0.0.1:8000/api/projects')
+        fetch('/api/projects')
             .then((res) => res.json())
             .then((data) => {
                 setProjects(data);
