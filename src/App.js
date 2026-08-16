@@ -117,7 +117,7 @@ function App() {
               <Route path="/contact" element={<ContactPage />} />
             </Routes>
             <hr />
-            <p><i>Travis Wylie - 2026</i></p>
+            <p className="footer"><i>Travis Wylie - 2026</i></p>
           </main>
         </div>
       </div>
