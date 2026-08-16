@@ -58,9 +58,6 @@ function Home() {
         <br />
         <br />
         <p><i>A self hosted AI model was used in the creation of this site.</i></p>
-        <hr />
-        <p><i>Travis Wylie - 2026</i></p>
-
       </div>
     </>
   );
@@ -119,6 +116,8 @@ function App() {
               <Route path="/projects" element={<Projects />} />
               <Route path="/contact" element={<ContactPage />} />
             </Routes>
+            <hr />
+            <p><i>Travis Wylie - 2026</i></p>
           </main>
         </div>
       </div>
