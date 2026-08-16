@@ -5,6 +5,7 @@ import Button from 'react-bootstrap/Button';
 import EmploymentHistory from './components/EmploymentHistory';
 import Qualifications from './components/Qualifications';
 import ProjectList from './components/Projects';
+import Contact from './components/Contact';
 import Navbar from './components/Navbar';
 
 function Home() {
@@ -89,11 +90,12 @@ function Projects() {
   );
 }
 
-function Contact() {
+function ContactPage() {
   return (
     <div className="page">
       <h1 className="mb-4">Contact Me</h1>
-      <p>Get in touch with me.</p>
+      <p>For any questions, references or additional code samples, please contact me through one of the following methods:</p>
+      <Contact />
     </div>
   );
 }
@@ -109,7 +111,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/experience" element={<Experience />} />
               <Route path="/projects" element={<Projects />} />
-              <Route path="/contact" element={<Contact />} />
+              <Route path="/contact" element={<ContactPage />} />
             </Routes>
           </main>
         </div>
