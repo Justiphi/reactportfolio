@@ -102,10 +102,9 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <div className="app-container d-flex">
-          <Navbar />
-
-          <main className="content-area p-5 flex-grow-1">
+        <Navbar />
+        <div className="app-container col-md-10">
+          <main className="content-area flex-grow-1">
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/experience" element={<Experience />} />
