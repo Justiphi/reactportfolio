@@ -82,21 +82,27 @@ function Experience() {
 
 function Projects() {
   return (
-    <div className="page">
-      <h1 className="mb-4">Projects</h1>
-      <p>My recent work and projects.</p>
-      <ProjectList />
-    </div>
+    <>
+      <title>Travis Wylie - Projects</title>
+      <div className="page">
+        <h1 className="mb-4">Projects</h1>
+        <p>My recent work and projects.</p>
+        <ProjectList />
+      </div>
+    </>
   );
 }
 
 function ContactPage() {
   return (
-    <div className="page">
-      <h1 className="mb-4">Contact Me</h1>
-      <p>For any questions, references or additional code samples, please contact me through one of the following methods:</p>
-      <Contact />
-    </div>
+    <>
+      <title>Travis Wylie - Contact</title>
+      <div className="page">
+        <h1 className="mb-4">Contact Me</h1>
+        <p>For any questions, references or additional code samples, please contact me through one of the following methods:</p>
+        <Contact />
+      </div>
+    </>
   );
 }
 
