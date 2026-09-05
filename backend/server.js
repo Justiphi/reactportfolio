@@ -4,7 +4,7 @@ const sql = require('mssql');
 require('dotenv').config();
 
 const app = express();
-app.use(cors({ origin: `${process.env.FRONTEND_HOST}:${FRONTEND_PORT}` }));
+app.use(cors({ origin: `${process.env.FRONTEND_HOST}:${process.env.FRONTEND_PORT}` }));
 app.use(express.json()); // Allows parsing JSON bodies
 
 // MSSQL Configuration Object
