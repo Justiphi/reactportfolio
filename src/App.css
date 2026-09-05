@@ -272,3 +272,43 @@ h1, h2 {
         padding-right: 1.5rem !important;
     }
 }
+
+/* Employment history card header: title centred with the filter switch on the
+   right, dropping the switch to its own line once the header gets too narrow
+   for both to sit comfortably side by side. */
+.employment-header {
+  position: relative;
+  container-type: inline-size;
+  container-name: employment-header;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem 1rem;
+}
+
+.employment-header__title {
+  flex: 0 0 100%;
+  text-align: center;
+}
+
+.employment-header__filter {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0;
+  white-space: nowrap;
+}
+
+@container employment-header (min-width: 40rem) {
+  .employment-header__title {
+    flex: 0 0 auto;
+  }
+
+  .employment-header__filter {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+  }
+}

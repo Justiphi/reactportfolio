@@ -35,10 +35,10 @@ function EmploymentHistory() {
 
   return (
     <Card className="shadow-sm mb-5 bg-dark text-light border-secondary">
-      <Card.Header className="bg-secondary text-white position-relative d-flex align-items-center justify-content-center">
-        <h2 className="mb-0 h5">Employment History</h2>
+      <Card.Header className="bg-secondary text-white employment-header">
+        <h2 className="mb-0 h5 employment-header__title">Employment History</h2>
 
-        <label className="d-flex align-items-center gap-2 mb-0 position-absolute top-50 end-0 translate-middle-y me-3">
+        <label className="employment-header__filter">
           <span>Show non-technical:</span>
           <Switch
             onChange={handleFilterChange}
