@@ -5,7 +5,7 @@ module.exports = function(app) {
   app.use(
     '/api',
     createProxyMiddleware({
-      target: `${process.env.BACKEND_HOST}:${BACKEND_PORT}/api`,
+      target: `${process.env.BACKEND_HOST}:${process.env.BACKEND_PORT}/api`,
       secure: false, // Prevents local self-signed SSL errors
       changeOrigin: true,
     })
