@@ -31,7 +31,10 @@ sql.connect(dbConfig)
 
 app.get('/api/GetExperience', async (req, res) => {
     try {
-        const result = await sql.query`SELECT * FROM Experience ORDER BY StartYear DESC`;
+        const showAll = req.query.showAll;
+        const whereClause = showAll == "true" ? '' : 'WHERE Experience.SoftwareBased = 1';
+        const sqlCommand = `SELECT * FROM Experience ${whereClause} ORDER BY StartYear DESC`;
+        const result = await sql.query(sqlCommand);
         res.json(result.recordset); // Returns raw array of rows
     } catch (err) {
         res.status(500).json({ error: err.message });
