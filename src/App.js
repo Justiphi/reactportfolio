@@ -18,10 +18,10 @@ function Home() {
 
         <br />
         <p>With 7 years of professional software development experience on top of having completed freelance work and mentoring, I have contributed to the development of many kinds of different applications while still finding time to continue with my own projects.</p>
+        <p>Since 2024 I have maintained and repaired my own FDM and resin 3D printers, and I build, upgrade and repair PCs and run Linux servers, so I am as comfortable with a machine open on the bench as I am with the firmware and software running on it.</p>
         <p>In my previous employment, I have been responsible for aiding the training of new staff members both locally and remote, while creating additional applications to help colleagues with timekeeping. As a result, time logs were more accurate and less time was taken to keep these logs as the software integrated with company systems by API.</p>
         <p>I have also had experience working remotely using time management skills and communication to assist collegues with various tasks while working on projects in varying timezones.</p>
-        <p>I am currently seeking an employment opportunity that would allow me to utilize my current experience and continue to grow as a developer while allowing me to follow my passion of creating new and exciting software.</p>
-
+        <p>I am currently seeking an employment opportunity that would allow me to utilize my current experience and continue to grow into new and exciting roles.</p>
         <br />
 
         <h2 className="mb-3">Blazor portfolio:</h2>
@@ -41,7 +41,7 @@ function Home() {
         <br />
 
         <h2 className="mb-3">CV:</h2>
-        <p>You can view my paper CV through the following link:</p>
+        <p>You can view my paper CVs through the following links:</p>
 
         <div className="text-center m-4">
           <Button 
@@ -50,7 +50,29 @@ function Home() {
             download
             className="download-cv-btn"
           >
-            <i className="bi bi-download"></i> CV as PDF
+            <i className="bi bi-download"></i> Software Development CV
+          </Button>
+        </div>
+        
+        <div className="text-center m-4">
+          <Button 
+            variant="primary" 
+            href="https://drive.google.com/file/d/1nRXbgScOzY6hkq79hkhYyBMh5uMcrOBT/view?usp=sharing"
+            download
+            className="download-cv-btn"
+          >
+            <i className="bi bi-download"></i> 3D Printer Technician CV
+          </Button>
+        </div>
+
+        <div className="text-center m-4">
+          <Button 
+            variant="primary" 
+            href="https://drive.google.com/file/d/122lijuOvJmxpqTaf9b0mmlMhPJK4Rt6h/view?usp=sharing"
+            download
+            className="download-cv-btn"
+          >
+            <i className="bi bi-download"></i> IT Technician CV
           </Button>
         </div>
         

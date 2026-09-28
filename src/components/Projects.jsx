@@ -36,6 +36,7 @@ function ProjectsList() {
                 <th>Language(s)</th>
                 <th>Framework(s)</th>
                 <th>Code</th>
+                <th>Link</th>
             </tr>
           </thead>
           <tbody>
@@ -46,6 +47,13 @@ function ProjectsList() {
                 <td>{project.Languages}</td>
                 <td>{project.Framework}</td>
                 <td><a href={project.GithubLink} rel="noopener">(Github)</a></td>
+                <td>
+                  {project.ProjectLink ? (
+                    <a href={project.ProjectLink} rel="noopener">(link)</a>
+                  ) : (
+                    <span>(no link)</span>
+                  )}
+                </td>
               </tr>
             ))}
           </tbody>
