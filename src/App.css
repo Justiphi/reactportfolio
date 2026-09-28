@@ -226,8 +226,9 @@ h1, h2 {
         /* Never collapse the sidebar for wide screens */
         display: block;
 
-        /* Allow sidebar to scroll for tall menus */
-        height: calc(100vh - 3.5rem);
+        /* Fill the remaining sidebar height and scroll for tall menus */
+        flex: 1;
+        min-height: 0;
         overflow-y: auto;
         border-bottom: none!important;
     }
@@ -238,6 +239,8 @@ h1, h2 {
       background-color: #282c34;
       padding: 20px;
       height: 100vh;
+      display: flex;
+      flex-direction: column;
       position: sticky;
       top: 0;
     }
